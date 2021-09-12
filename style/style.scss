@@ -13,3 +13,13 @@
         background-image: url(/素材/toggle-icon-03.png);
     }
 }
+.banner{
+    width: 100%;
+    position: relative;
+    
+    img:last-child{
+        position: absolute;
+        bottom: 10%;
+        right: 5%;
+    }
+}
