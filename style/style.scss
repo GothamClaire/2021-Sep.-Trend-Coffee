@@ -1,11 +1,17 @@
+$pirmary-color:  #00183c;
+$secondary-color: #f7e1d5;
+$button-color: #cf7d5c;
+$minor-title-color: #853032;
+$text-color:#474747;
+
 .navbar{
-    background-color: #00183c;
+    background-color: $pirmary-color;
     a{
-        color: #f3e7cf;
+        color: $secondary-color;
     }
     img{
-    width: 200px;
-    height: 30px;
+        width: 200px;
+        height: 30px;
     }
     .navbar-toggler-icon {
         width: 45px;
