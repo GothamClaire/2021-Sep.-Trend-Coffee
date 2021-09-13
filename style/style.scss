@@ -3,6 +3,12 @@ $secondary-color: #f7e1d5;
 $button-color: #cf7d5c;
 $minor-title-color: #853032;
 $text-color:#474747;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap');
+
+h1{
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 700;
+}
 
 .navbar{
     background-color: $pirmary-color;
@@ -27,5 +33,23 @@ $text-color:#474747;
         position: absolute;
         bottom: 10%;
         right: 5%;
+    }
+}
+.carousel-control-prev-icon,{
+    background-image: url(/素材/next.svg);
+    transform: scaleX(-1);
+}
+.carousel-control-next-icon{
+    background-image: url(/素材/next.svg);
+}
+.carousel-indicators li{
+    background-color: $text-color;
+}
+.product-beans-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .carousel{
+        width: 80%;
     }
 }
