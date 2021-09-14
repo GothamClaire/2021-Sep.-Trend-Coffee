@@ -1,18 +1,59 @@
 $pirmary-color:  #00183c;
 $secondary-color: #f7e1d5;
-$button-color: #cf7d5c;
+$button-color: #db946b;
 $minor-title-color: #853032;
 $text-color:#474747;
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC');
+
+h1{
+    font-weight: 700;
+    font-size: 28px;
+}
+h2{
+    font-weight: 700;
+    font-size: 24px;
+}
+h3{
+    font-weight: 600;
+    font-size: 20px;
+}
+h4{
+    font-weight: 500;
+    font-size: 16px;
+}
+p,li{
+    font-weight: 600;
+    font-size: 16px;
+}
+
 
 @mixin decoration-bean($size) {
     content: "";
-    background-image: url(/素材/coffee-bean-icon-05.png);
+    background-image: url(/素材/coffee-bean-icon-blue.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     display: inline-block;
     width: $size;
     height: $size;
-    margin: auto;
+}
+
+%button {
+    width: 180px;
+    height: 50px;
+    background-color: $button-color;
+    color: $pirmary-color;
+    font-weight: 700;
+    font-size: 24px;
+    border-radius: 10px;
+    border:none
+}
+        
+%fixedIcon{
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }

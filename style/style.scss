@@ -1,18 +1,41 @@
 @import 'base';
-
+*{
+    font-family: 'Noto Serif TC', serif;
+}
 body{
     width: 100%;
-}
+    min-width: 320px;
+    height: 100vh;
+    position: relative;
+    .fixed{
+        width: 30px;
+        height: 120px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
 
-h1{
-    font-family: 'Noto Serif TC', serif;
-    font-weight: 700;
+        .messenger-icon{
+            background-image: url(/素材/messenger-brown-06.svg);
+            @extend %fixedIcon;
+        }
+        .line-icon{
+            background-image: url(/素材/line-brown-07.svg);
+            @extend %fixedIcon; 
+        }
+        .top{
+            background-image: url(/素材/top-08.svg);
+            @extend %fixedIcon;
+        }
+    }
 }
-
 .navbar{
     background-color: $pirmary-color;
     a{
         color: $secondary-color;
+        font-weight: 500;
     }
     img{
         width: 200px;
@@ -36,32 +59,87 @@ h1{
 }
 .introduction{
     width: 100%;
-    padding-top: 36px;
+    padding-top: 25px;
+    margin-bottom: 35px;
 
     h1{
         text-align: center;
         color: $pirmary-color;
-    }
+        margin-bottom: 20px;
+        line-height: 28px;
+      }
     h1::before{
-        @include decoration-bean(30px);
-        transform: translateX(-10px);
+        @include decoration-bean(25px);
+        margin-right: 10px;
     }
-    .carousel-control-prev-icon{
-        background-image: url(/素材/next.svg);
-        transform: scaleX(-1);
-    }
-    .carousel-control-next-icon{
-        background-image: url(/素材/next.svg);
-    }
-    .carousel-indicators li{
-        background-color: $text-color;
-    }
-    .product-beans-container{
+    .product-beans-container,.product-bags-container{
         width: 100%;
-        display: flex;
-        justify-content: center;
-        .carousel{
-            width: 80%;
+        padding: 0 10%;
+        margin-bottom: 25px;
+        .carousel.slide{
+        width: 100%;
+        margin-bottom: 25px;
+            .carousel-control-prev-icon{
+                background-image: url(/素材/next.svg);
+                transform: scaleX(-1);
+            }
+            .carousel-control-next-icon{
+                background-image: url(/素材/next.svg);
+            }
+            .carousel-indicators li{
+                background-color: $text-color;
+            }
         }
+        h2,h3{
+            color: $pirmary-color;
+        }
+        ul{
+            padding: 0;
+        }
+        li{
+            color: $text-color;
+            list-style: none;
+            line-height: 35px;
+        }
+        li::before{
+            @include decoration-bean(10px);
+            margin-right: 10px;
+        }
+        h4{
+            color:$minor-title-color;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        button{
+            @extend %button;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+}
+.origin{
+    width: 100%;
+    background-color: #e7e1dc;
+    padding: 15px 0;
+    h2{
+        text-align: center;
+        color: $pirmary-color;
+        margin-bottom: 15px;
+    }
+    h2::before{
+        @include decoration-bean(20px);
+        margin-right: 10px;
+    }
+    .explanation{
+        padding: 0 10%;
+        *{
+            color: $minor-title-color;
+        }
+    }
+    .pictures{
+        height: 185px;
+        overflow: scroll;
+        display: flex;
+        margin-bottom: 25px;
     }
 }
