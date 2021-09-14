@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap");
+body {
+  width: 100%;
+}
+
 h1 {
   font-family: 'Noto Serif TC', serif;
   font-weight: 700;
@@ -35,21 +39,45 @@ h1 {
   right: 5%;
 }
 
-.carousel-control-prev-icon {
+.introduction {
+  width: 100%;
+  padding-top: 36px;
+}
+
+.introduction h1 {
+  text-align: center;
+  color: #00183c;
+}
+
+.introduction h1::before {
+  content: "";
+  background-image: url(/素材/coffee-bean-icon-05.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+
+.introduction .carousel-control-prev-icon {
   background-image: url(/素材/next.svg);
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
 }
 
-.carousel-control-next-icon {
+.introduction .carousel-control-next-icon {
   background-image: url(/素材/next.svg);
 }
 
-.carousel-indicators li {
+.introduction .carousel-indicators li {
   background-color: #474747;
 }
 
-.product-beans-container {
+.introduction .product-beans-container {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -59,7 +87,7 @@ h1 {
           justify-content: center;
 }
 
-.product-beans-container .carousel {
+.introduction .product-beans-container .carousel {
   width: 80%;
 }
 /*# sourceMappingURL=style.css.map */
