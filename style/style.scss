@@ -146,6 +146,9 @@ body{
 .flavor{
     width: 100%;
     padding: 40px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .pic{
         width: 300px;
         height: 300px;
@@ -169,9 +172,11 @@ body{
     h4{
         font-weight: 600;
         color: $minor-title-color;
+        align-self: start;
     }
     ul{
         padding-left: 0px;
+        align-self: start;
     }
     li{
         list-style: none;
@@ -184,7 +189,7 @@ body{
     }
 }
 .certification{
-    padding: 25px 0;
+    padding: 25px 0 35px 0;
     background-color: #c0a898;
     *{
         color: white;
@@ -235,5 +240,33 @@ body{
                 width: 195px;
                 height: 272px;
             }
+    }
+    .modal-dialog{
+        position: relative;
+    }
+    .modal-content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        background-color: transparent;
+        width: 95vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            width: 95%;
+            max-width: 435px;
+            max-height: 80vh;
+        }
+    }
+    .modal-title{
+        color:white;
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 10px;
     }
 }

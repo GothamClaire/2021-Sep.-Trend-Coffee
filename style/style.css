@@ -247,6 +247,16 @@ body .fixed .top {
 .flavor {
   width: 100%;
   padding: 40px 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .flavor .pic {
@@ -283,10 +293,16 @@ body .fixed .top {
 .flavor h4 {
   font-weight: 600;
   color: #853032;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
 }
 
 .flavor ul {
   padding-left: 0px;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
 }
 
 .flavor li {
@@ -308,7 +324,7 @@ body .fixed .top {
 }
 
 .certification {
-  padding: 25px 0;
+  padding: 25px 0 35px 0;
   background-color: #c0a898;
 }
 
@@ -381,5 +397,46 @@ body .fixed .top {
 .certification .slider img {
   width: 195px;
   height: 272px;
+}
+
+.certification .modal-dialog {
+  position: relative;
+}
+
+.certification .modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  background-color: transparent;
+  width: 95vw;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.certification .modal-content img {
+  width: 95%;
+  max-width: 435px;
+  max-height: 80vh;
+}
+
+.certification .modal-title {
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 /*# sourceMappingURL=style.css.map */
