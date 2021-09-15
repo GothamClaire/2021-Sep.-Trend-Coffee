@@ -243,4 +243,143 @@ body .fixed .top {
   display: flex;
   margin-bottom: 25px;
 }
+
+.flavor {
+  width: 100%;
+  padding: 40px 10%;
+}
+
+.flavor .pic {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-image: url(/素材/flavor.jpg);
+  background-position: 0;
+  background-size: cover;
+  margin-bottom: 30px;
+}
+
+.flavor h2 {
+  text-align: center;
+  color: #00183c;
+}
+
+.flavor h2::before {
+  content: "";
+  background-image: url(/素材/coffee-bean-icon-blue.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.flavor p {
+  color: #00183c;
+}
+
+.flavor h4 {
+  font-weight: 600;
+  color: #853032;
+}
+
+.flavor ul {
+  padding-left: 0px;
+}
+
+.flavor li {
+  list-style: none;
+  color: #853032;
+}
+
+.flavor li::before {
+  content: "";
+  background-image: url(/素材/coffee-bean-icon-blue.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  background-image: url(/素材/coffee-bean-icon-red-10.svg);
+}
+
+.certification {
+  padding: 25px 0;
+  background-color: #c0a898;
+}
+
+.certification * {
+  color: white;
+}
+
+.certification h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.certification h2::before {
+  content: "";
+  background-image: url(/素材/coffee-bean-icon-blue.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(/素材/coffee-bean-icon-white-09.svg);
+  margin-right: 10px;
+}
+
+.certification .slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  overflow-x: scroll;
+}
+
+.certification .slider::-webkit-scrollbar {
+  height: 5px;
+}
+
+.certification .slider::-webkit-scrollbar-track {
+  margin: 10px;
+}
+
+.certification .slider::-webkit-scrollbar-thumb {
+  background-color: #853032;
+  border-radius: 20%;
+  border: 1px solid slategrey;
+}
+
+.certification .slider input {
+  display: none;
+}
+
+.certification .slider .cover {
+  width: 200px;
+  height: 100px;
+  background-color: black;
+}
+
+.certification .slider .items {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.certification .slider h4 {
+  text-align: center;
+}
+
+.certification .slider img {
+  width: 195px;
+  height: 272px;
+}
 /*# sourceMappingURL=style.css.map */
