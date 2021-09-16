@@ -23,29 +23,29 @@
         <a class="navbar-brand" href="#">
             <img src="./素材/logo-white-02.svg" alt="logo">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="nav-button">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">產品介紹<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#product-anchor">產品介紹<span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">關於我們</a>
-            <li class="nav-item"><a class="nav-link" href="#">相關文章</a>
-            <li class="nav-item"><a class="nav-link" href="#">訂購流程</a>
-            <li class="nav-item"><a class="nav-link" href="#">聯絡我們</a>
+            <li class="nav-item"><a class="nav-link" href="#about-anchor">關於我們</a>
+            <li class="nav-item"><a class="nav-link" href="#articles-anchor">相關文章</a>
+            <li class="nav-item"><a class="nav-link" href="#purchase-anchor">訂購流程</a>
+            <li class="nav-item"><a class="nav-link" href="#contact-anchor">聯絡我們</a>
             </li>
           </ul>
         </div>
         </nav>
         <div class="banner">
           <img src="./素材/banner-cut.jpg" alt="banner" width="100%"style="object-fit:contain";>
-          <img src="./素材/logo-color-svg-04.svg" alt="logo"width="25%" >
+          <img src="./素材/logo-color-svg-04.svg" alt="logo"width="25%" id="product-anchor">
         </div>
     </header>
     <main>
-        <section class="product">
+        <section class="product" id="product">
             <div class="introduction">
               <h1>產品介紹</h1>
               <div class="product-beans-container">  
@@ -144,7 +144,7 @@
             </div>
             <div class="certification">
               <h2>安心認證</h2>
-              <div class="slider">
+              <div class="slider" >
                 <div id="items-1" class="items" data-toggle="modal" data-target="#lightbox-1">
                   <h4>CODEX認證</h4>
                   <img src="./素材/證書/CODEX GMP_page-0001.jpg" alt="">
@@ -208,7 +208,7 @@
               </div>
             </div>
         </section>
-        <section class="about">
+        <section class="about" id="about-anchor">
             <div class="local-pictures swiper mySwiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
@@ -265,7 +265,7 @@
             <li>2.改善小農們的生活，兼顧土地保護，重視永續環境經營的生態。</li>
             <li>3.部分收入捐款給一直合作的「福智基金會」</li>
           </ul>
-          <p>正所謂「今天不花經費在教育上，將來一定花在蓋監獄上」，藉由我們的一點努力，讓許多無法掌握學習資源的小朋友們能安心在學習上，期許他們的勇氣，善良與人格，能讓整體社會的成就往前邁進一大步。</p>
+          <p id="articles-anchor">正所謂「今天不花經費在教育上，將來一定花在蓋監獄上」，藉由我們的一點努力，讓許多無法掌握學習資源的小朋友們能安心在學習上，期許他們的勇氣，善良與人格，能讓整體社會的成就往前邁進一大步。</p>
         </section>
         <section class="articles">
           <div class="color">
@@ -274,7 +274,7 @@
             <div class="card">
               <img src="./素材/沖泡示意圖.jpg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h4 class="card-title">在家也能喝到好咖啡的7種沖泡方法</h4>
+                <h4 class="card-title" id="purchase-anchor">在家也能喝到好咖啡的7種沖泡方法</h4>
                 <a href="#">check>></a>
               </div>
             </div>
@@ -347,7 +347,7 @@
                 <h4>收到商品</h4>
               </div> 
               <div class="steps">
-                <button>即刻體驗</button>
+                <button id="contact-anchor">即刻體驗</button>
               </div>
             </div>
         </div>
@@ -357,6 +357,7 @@
       <div class="footer-top">
         <img src="素材/white-logo-13.svg" class="footer-logo">
         <div class="contact">
+          <h3>聯絡我們</h3>
           <div class="contact-icon-wrap">
             <img src="./素材/facebook-icon-white-14.svg" alt="" class="facebook-icon">
             <img src="./素材/line-icon-white-14.svg" alt="" class="line-icon">
@@ -387,5 +388,16 @@
         },
       });
     </script>
+    <script>
+      var navCheck=document.querySelector('#nav-button"')
+
+      var nav=document.querySelectorAll('.nav-item')
+      nav.forEach(element => {
+      element.onclick = function() {
+          navCheck.checked=false
+      }
+      });
+
+  </script>
   </body>
 </html>

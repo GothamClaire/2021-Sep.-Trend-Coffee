@@ -34,8 +34,15 @@ body {
 main {
   width: 100%;
 }
+nav{
+  z-index: 10;
+}
 .navbar {
   background-color: $pirmary-color;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
   a {
     color: $secondary-color;
     font-weight: 500;
@@ -510,6 +517,11 @@ footer{
 }
 .contact{
     width: 40%;
+    h3{
+      color:$secondary-color;
+      text-align: center;
+      font-weight: 500;
+    }
 }
 .contact-icon-wrap{
     display: flex;
