@@ -26,6 +26,12 @@ p,li{
     font-weight: 600;
     font-size: 16px;
 }
+ul{
+    padding-left: 0px;
+}
+li{
+    list-style: none;
+}
 
 
 @mixin decoration-bean($size) {
@@ -37,6 +43,7 @@ p,li{
     display: inline-block;
     width: $size;
     height: $size;
+    margin-right: 10px;
 }
 
 %button {

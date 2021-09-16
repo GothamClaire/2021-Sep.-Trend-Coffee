@@ -25,7 +25,16 @@ p, li {
   font-size: 16px;
 }
 
-.introduction .product-beans-container button, .introduction .product-bags-container button {
+ul {
+  padding-left: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+.product-beans-container button,
+.product-bags-container button, .steps button {
   width: 180px;
   height: 50px;
   background-color: #db946b;
@@ -45,7 +54,7 @@ body .fixed .messenger-icon, body .fixed .line-icon, body .fixed .top {
 }
 
 * {
-  font-family: 'Noto Serif TC', serif;
+  font-family: "Noto Serif TC", serif;
 }
 
 body {
@@ -83,6 +92,10 @@ body .fixed .line-icon {
 
 body .fixed .top {
   background-image: url(/素材/top-08.svg);
+}
+
+main {
+  width: 100%;
 }
 
 .navbar {
@@ -141,46 +154,55 @@ body .fixed .top {
   margin-right: 10px;
 }
 
-.introduction .product-beans-container, .introduction .product-bags-container {
+.product-beans-container,
+.product-bags-container {
   width: 100%;
   padding: 0 10%;
   margin-bottom: 25px;
 }
 
-.introduction .product-beans-container .carousel.slide, .introduction .product-bags-container .carousel.slide {
+.product-beans-container .carousel.slide,
+.product-bags-container .carousel.slide {
   width: 100%;
   margin-bottom: 25px;
 }
 
-.introduction .product-beans-container .carousel.slide .carousel-control-prev-icon, .introduction .product-bags-container .carousel.slide .carousel-control-prev-icon {
+.product-beans-container .carousel.slide .carousel-control-prev-icon,
+.product-bags-container .carousel.slide .carousel-control-prev-icon {
   background-image: url(/素材/next.svg);
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
 }
 
-.introduction .product-beans-container .carousel.slide .carousel-control-next-icon, .introduction .product-bags-container .carousel.slide .carousel-control-next-icon {
+.product-beans-container .carousel.slide .carousel-control-next-icon,
+.product-bags-container .carousel.slide .carousel-control-next-icon {
   background-image: url(/素材/next.svg);
 }
 
-.introduction .product-beans-container .carousel.slide .carousel-indicators li, .introduction .product-bags-container .carousel.slide .carousel-indicators li {
+.product-beans-container .carousel.slide .carousel-indicators li,
+.product-bags-container .carousel.slide .carousel-indicators li {
   background-color: #474747;
 }
 
-.introduction .product-beans-container h2, .introduction .product-beans-container h3, .introduction .product-bags-container h2, .introduction .product-bags-container h3 {
+.product-beans-container h2,
+.product-beans-container h3,
+.product-bags-container h2,
+.product-bags-container h3 {
   color: #00183c;
 }
 
-.introduction .product-beans-container ul, .introduction .product-bags-container ul {
+.product-beans-container ul,
+.product-bags-container ul {
   padding: 0;
 }
 
-.introduction .product-beans-container li, .introduction .product-bags-container li {
+.product-beans-container li,
+.product-bags-container li {
   color: #474747;
-  list-style: none;
-  line-height: 35px;
 }
 
-.introduction .product-beans-container li::before, .introduction .product-bags-container li::before {
+.product-beans-container li::before,
+.product-bags-container li::before {
   content: "";
   background-image: url(/素材/coffee-bean-icon-blue.svg);
   background-repeat: no-repeat;
@@ -192,13 +214,15 @@ body .fixed .top {
   margin-right: 10px;
 }
 
-.introduction .product-beans-container h4, .introduction .product-bags-container h4 {
+.product-beans-container h4,
+.product-bags-container h4 {
   color: #853032;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
-.introduction .product-beans-container button, .introduction .product-bags-container button {
+.product-beans-container button,
+.product-bags-container button {
   margin: 0 auto;
   display: block;
 }
@@ -236,8 +260,7 @@ body .fixed .top {
 }
 
 .origin .pictures {
-  height: 185px;
-  overflow: scroll;
+  overflow-X: scroll;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -299,14 +322,12 @@ body .fixed .top {
 }
 
 .flavor ul {
-  padding-left: 0px;
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
 }
 
 .flavor li {
-  list-style: none;
   color: #853032;
 }
 
@@ -319,6 +340,7 @@ body .fixed .top {
   display: inline-block;
   width: 12px;
   height: 12px;
+  margin-right: 10px;
   margin-right: 5px;
   background-image: url(/素材/coffee-bean-icon-red-10.svg);
 }
@@ -346,8 +368,8 @@ body .fixed .top {
   display: inline-block;
   width: 20px;
   height: 20px;
-  background-image: url(/素材/coffee-bean-icon-white-09.svg);
   margin-right: 10px;
+  background-image: url(/素材/coffee-bean-icon-white-09.svg);
 }
 
 .certification .slider {
@@ -410,7 +432,7 @@ body .fixed .top {
   -webkit-transform: translate(-50%, 50%);
           transform: translate(-50%, 50%);
   background-color: transparent;
-  width: 95vw;
+  width: 60vw;
   height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -428,7 +450,7 @@ body .fixed .top {
 }
 
 .certification .modal-content img {
-  width: 95%;
+  width: 90vw;
   max-width: 435px;
   max-height: 80vh;
 }
@@ -438,5 +460,411 @@ body .fixed .top {
   text-align: center;
   font-size: 24px;
   margin-bottom: 10px;
+}
+
+.about {
+  width: 100%;
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+.swiper {
+  width: 80%;
+  margin-bottom: 25px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+:root {
+  --swiper-theme-color: #f8f9fa;
+}
+
+.hand-writing {
+  width: 85%;
+  -webkit-transform: rotate(-5deg) scale(110%);
+          transform: rotate(-5deg) scale(110%);
+}
+
+.founders {
+  width: 100%;
+  padding: 0 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10vw;
+}
+
+.founders h1 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-bottom: 30px;
+  color: #00183c;
+}
+
+.founders h1::before {
+  content: "";
+  background-image: url(/素材/coffee-bean-icon-blue.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.founder-block {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 25vw;
+  height: 25vw;
+  border-radius: 50%;
+  background-color: #a2b9d1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-pic img {
+  width: 65%;
+}
+
+.words {
+  justify-self: flex-end;
+  margin-left: 20px;
+}
+
+.words h4 {
+  font-weight: 600;
+  color: #00183c;
+}
+
+.words p {
+  color: #853032;
+}
+
+.charity {
+  padding: 10px 8%;
+  background-color: #efcfbd;
+}
+
+.charity * {
+  color: #00183c;
+}
+
+.charity h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.charity h1::before {
+  content: "";
+  background-image: url(/素材/coffee-bean-icon-blue.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.charity img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top;
+     object-position: top;
+  margin-bottom: 20px;
+  border-radius: 2%;
+}
+
+.charity h3 {
+  margin-bottom: 20px;
+}
+
+.charity li {
+  line-height: 1.5;
+}
+
+.articles {
+  width: 100%;
+  background-image: url(/素材/coffee-beans-5928036_1920.jpg);
+  background-size: cover;
+}
+
+.articles .color {
+  padding: 25px 0;
+  background-color: rgba(124, 101, 86, 0.8);
+  z-index: 1;
+}
+
+.articles h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.articles h1::before {
+  content: "";
+  background-image: url(/素材/coffee-bean-icon-blue.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  background-image: url(/素材/coffee-bean-icon-white-09.svg);
+}
+
+.card-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  overflow-x: scroll;
+  padding-left: 10px;
+}
+
+.card {
+  width: 200px;
+  min-width: unset;
+  margin-right: 10px;
+  border: unset;
+  border-radius: 5%;
+}
+
+.card-img-top {
+  width: unset;
+  border-top-right-radius: 5%;
+  border-top-left-radius: 5%;
+}
+
+.card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5%;
+}
+
+.card-body a {
+  color: black;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  font-weight: 600;
+}
+
+.card-body h4 {
+  background-color: #f7e1d5;
+  font-weight: 600;
+  border-radius: 5%;
+}
+
+.purchase {
+  padding: 25px 10%;
+}
+
+.purchase h1 {
+  text-align: center;
+  color: #00183c;
+}
+
+.purchase h1::before {
+  content: "";
+  background-image: url(/素材/coffee-bean-icon-blue.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.icon-pair-wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.icon-pair {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.icon-pair img {
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+}
+
+.steps h3 {
+  color: #853032;
+  margin-bottom: 5px;
+}
+
+.steps h4 {
+  color: #474747;
+}
+
+.steps button {
+  width: 80%;
+  min-height: 20%;
+  font-size: 5vw;
+}
+
+footer {
+  background-color: #604b40;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding: 20px 10%;
+}
+
+footer h4 {
+  color: #f7e1d5;
+  text-align: center;
+}
+
+.footer-top {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+
+.footer-top .footer-logo {
+  width: 40%;
+}
+
+.contact {
+  width: 40%;
+}
+
+.contact-icon-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 10px;
+}
+
+.contact-icon-wrap img {
+  width: 20%;
+  max-width: 30px;
+}
+
+.contact-icon-wrap img:first-child {
+  margin-right: 40px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
     <link rel="stylesheet" href="style/style.css">
     <title>Tred Coffee 川咖啡</title>
 </head>
@@ -201,20 +209,183 @@
             </div>
         </section>
         <section class="about">
-            <div class="local-pictures">
+            <div class="local-pictures swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="./素材/小農01.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./素材/小農02.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./素材/產地07.jpg" alt="">
+                  </div>
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
-            <img src="" alt="">
-            <div class="founders"></div>
+            <img src="./素材/hand-writing.png" alt="" class="hand-writing">
+            <div class="founders">
+              <h1>創辦人的話</h1>
+              <div class="founder-block">
+                  <div class="profile-pic">
+                    <img src="./素材/founder-icon01-11.svg" alt="">
+                  </div>
+                <div class="words">
+                  <h4>Amy</h4>
+                  <p>每一顆咖啡豆，</br>都要用貞敬的心看待</p>
+                </div>
+              </div>
+              <div class="founder-block">
+                  <div class="profile-pic">
+                    <img src="./素材/founder-icon02-11.svg" alt="">
+                  </div>
+                <div class="words">
+                  <h4>Amy</h4>
+                  <p>每一顆咖啡豆，</br>都要用貞敬的心看待</p>
+                </div>
+              </div>
+              <div class="founder-block">
+                  <div class="profile-pic">
+                    <img src="./素材/founder-icon03-11.svg" alt="">
+                  </div>
+                <div class="words">
+                  <h4>Amy</h4>
+                  <p>每一顆咖啡豆，</br>都要用貞敬的心看待</p>
+                </div>
+              </div>
+            </div>
         </section>
-        <section class="charity"></section>
-        <section class="purchase"></section>
+        <section class="charity">
+          <h1>社會責任</h1>
+          <img src="./素材/pexels-akil-mazumder-1072824.jpg" alt="">
+          <h3>川咖啡以ESG方向為目標，做出三大類持續努力經營著。
+          </h3>
+          <ul>
+            <li>1.落實與當地小農建立良好的合作關係與環境保護。</li>
+            <li>2.改善小農們的生活，兼顧土地保護，重視永續環境經營的生態。</li>
+            <li>3.部分收入捐款給一直合作的「福智基金會」</li>
+          </ul>
+          <p>正所謂「今天不花經費在教育上，將來一定花在蓋監獄上」，藉由我們的一點努力，讓許多無法掌握學習資源的小朋友們能安心在學習上，期許他們的勇氣，善良與人格，能讓整體社會的成就往前邁進一大步。</p>
+        </section>
+        <section class="articles">
+          <div class="color">
+          <h1>相關文章</h1>
+          <div class="card-container">
+            <div class="card">
+              <img src="./素材/沖泡示意圖.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title">在家也能喝到好咖啡的7種沖泡方法</h4>
+                <a href="#">check>></a>
+              </div>
+            </div>
+            <div class="card">
+              <img src="./素材/圖庫.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title">在家也能喝到好咖啡的7種沖泡方法</h4>
+                <a href="#">check>></a>
+              </div>
+            </div>
+            <div class="card">
+              <img src="./素材/coffee-171653_1920.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title">在家也能喝到好咖啡的7種沖泡方法</h4>
+                <a href="#">check>></a>
+              </div>
+            </div>
+            <div class="card">
+              <img src="./素材/coffee-984328_1920.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title">在家也能喝到好咖啡的7種沖泡方法</h4>
+                <a href="#">check>></a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </section>
+        <section class="purchase">
+          <h1>訂購流程</h1>
+          <div class="icon-pair-wrap">
+            <div class="icon-pair">
+              <div class="steps step01">
+                <img src="./素材/purchase/step01-12.svg" alt="" class="purchase-icon">
+                <h3>STEP 1</h3>
+                <h4>私訊FB或Line</h4>
+              </div>
+              <div class="steps step02">
+                <img src="./素材/purchase/step02-12.svg" alt="" class="purchase-icon">
+                <h3>STEP 2</h3>
+                <h4>確認欲訂購商品</h4>
+              </div>
+            </div>
+            <div class="icon-pair">
+              <div class="steps step03">
+                <img src="./素材/purchase/step03-12.svg" alt="" class="purchase-icon">
+                <h3>STEP 3</h3>
+                <h4>確認收貨方式</br>（超商／郵局）</h4>
+              </div>
+              <div class="steps step04"><img src="./素材/purchase/step04-12.svg" alt="" class="purchase-icon">
+                <h3>STEP 4</h3>
+                <h4>提供匯款帳號後五碼</br>（收到匯款後出貨）</h4>
+              </div>
+            </div>
+            <div class="icon-pair">
+              <div class="steps step05">
+                <img src="./素材/purchase/step05-12.svg" alt="" class="purchase-icon">
+                <h3>STEP 5</h3>
+                <h4>物流配送</h4>
+              </div>
+              <div class="steps step06">
+              <img src="./素材/purchase/step06-12.svg" alt="" class="purchase-icon">
+              <h3>STEP 6</h3>
+              <h4>聯絡通知商品送達</h4>
+              </div>
+            </div>
+            <div class="icon-pair">
+              <div class="steps step07">
+                <img src="./素材/purchase/step07-12.svg" alt="" class="purchase-icon">
+                <h3>STEP 7</h3>
+                <h4>收到商品</h4>
+              </div> 
+              <div class="steps">
+                <button>即刻體驗</button>
+              </div>
+            </div>
+        </div>
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="footer-top">
+        <img src="素材/white-logo-13.svg" class="footer-logo">
+        <div class="contact">
+          <div class="contact-icon-wrap">
+            <img src="./素材/facebook-icon-white-14.svg" alt="" class="facebook-icon">
+            <img src="./素材/line-icon-white-14.svg" alt="" class="line-icon">
+          </div>
+          <h4>0905005891</h4>
+          <h4>周一至周五</h4>
+          <h4>09:00~18:00</h4>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <h4>image source:</h4>
+        <h4>Pixabay, Pexel, Flatcon</h4>
+        <h4>版權所有© 2021 川咖啡</h4>
+      </div>
+    </footer>
     <div class="fixed">
       <a href="#"><div class="messenger-icon"></div></a>
       <a href="#"><div class="line-icon"></div></a>
       <a href="#"><div class="top"></div></a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    </script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
   </body>
 </html>

@@ -1,272 +1,525 @@
-@import 'base';
-*{
-    font-family: 'Noto Serif TC', serif;
+@import "base";
+* {
+  font-family: "Noto Serif TC", serif;
 }
-body{
-    width: 100%;
-    min-width: 320px;
-    height: 100vh;
-    position: relative;
-    .fixed{
-        width: 30px;
-        height: 120px;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        position: fixed;
-        right: 10px;
-        bottom: 10px;
+body {
+  width: 100%;
+  min-width: 320px;
+  height: 100vh;
+  position: relative;
+  .fixed {
+    width: 30px;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
 
-        .messenger-icon{
-            background-image: url(/素材/messenger-brown-06.svg);
-            @extend %fixedIcon;
-        }
-        .line-icon{
-            background-image: url(/素材/line-brown-07.svg);
-            @extend %fixedIcon; 
-        }
-        .top{
-            background-image: url(/素材/top-08.svg);
-            @extend %fixedIcon;
-        }
+    .messenger-icon {
+      background-image: url(/素材/messenger-brown-06.svg);
+      @extend %fixedIcon;
+    }
+    .line-icon {
+      background-image: url(/素材/line-brown-07.svg);
+      @extend %fixedIcon;
+    }
+    .top {
+      background-image: url(/素材/top-08.svg);
+      @extend %fixedIcon;
+    }
+  }
+}
+main {
+  width: 100%;
+}
+.navbar {
+  background-color: $pirmary-color;
+  a {
+    color: $secondary-color;
+    font-weight: 500;
+  }
+  img {
+    width: 200px;
+    height: 30px;
+  }
+  .navbar-toggler-icon {
+    width: 45px;
+    height: 26px;
+    background-image: url(/素材/toggle-icon-03.png);
+  }
+}
+.banner {
+  width: 100%;
+  position: relative;
+
+  img:last-child {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+  }
+}
+.introduction {
+  width: 100%;
+  padding-top: 25px;
+  margin-bottom: 35px;
+
+  h1 {
+    text-align: center;
+    color: $pirmary-color;
+    margin-bottom: 20px;
+    line-height: 28px;
+  }
+  h1::before {
+    @include decoration-bean(25px);
+  }
+}
+.product-beans-container,
+.product-bags-container {
+  width: 100%;
+  padding: 0 10%;
+  margin-bottom: 25px;
+  .carousel.slide {
+    width: 100%;
+    margin-bottom: 25px;
+    .carousel-control-prev-icon {
+      background-image: url(/素材/next.svg);
+      transform: scaleX(-1);
+    }
+    .carousel-control-next-icon {
+      background-image: url(/素材/next.svg);
+    }
+    .carousel-indicators li {
+      background-color: $text-color;
+    }
+  }
+  h2,
+  h3 {
+    color: $pirmary-color;
+  }
+  ul {
+    padding: 0;
+  }
+  li {
+    color: $text-color;
+  }
+  li::before {
+    @include decoration-bean(10px);
+  }
+  h4 {
+    color: $minor-title-color;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  button {
+    @extend %button;
+    margin: 0 auto;
+    display: block;
+  }
+}
+.origin {
+  width: 100%;
+  background-color: #e7e1dc;
+  padding: 15px 0;
+  h2 {
+    text-align: center;
+    color: $pirmary-color;
+    margin-bottom: 15px;
+  }
+  h2::before {
+    @include decoration-bean(20px);
+  }
+  .explanation {
+    padding: 0 10%;
+    * {
+      color: $minor-title-color;
+    }
+  }
+  .pictures {
+    // height: 185px;
+    overflow-X: scroll;
+    display: flex;
+    margin-bottom: 25px;
+  }
+}
+.flavor {
+  width: 100%;
+  padding: 40px 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-image: url(/素材/flavor.jpg);
+    background-position: 0;
+    background-size: cover;
+    margin-bottom: 30px;
+  }
+  h2 {
+    text-align: center;
+    color: $pirmary-color;
+  }
+  h2::before {
+    @include decoration-bean(20px);
+  }
+  p {
+    color: $pirmary-color;
+  }
+  h4 {
+    font-weight: 600;
+    color: $minor-title-color;
+    align-self: start;
+  }
+  ul {
+    align-self: start;
+  }
+  li {
+    color: $minor-title-color;
+  }
+  li::before {
+    @include decoration-bean(12px);
+    margin-right: 5px;
+    background-image: url(/素材/coffee-bean-icon-red-10.svg);
+  }
+}
+.certification {
+  padding: 25px 0 35px 0;
+  background-color: #c0a898;
+  * {
+    color: white;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  h2::before {
+    @include decoration-bean(20px);
+    background-image: url(/素材/coffee-bean-icon-white-09.svg);
+  }
+  .slider {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      margin: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $minor-title-color;
+      border-radius: 20%;
+      border: 1px solid slategrey;
+    }
+
+    input {
+      display: none;
+    }
+    .cover {
+      width: 200px;
+      height: 100px;
+      background-color: black;
+    }
+    .items {
+      display: inline-block;
+      margin: 0 10px;
+    }
+    h4 {
+      text-align: center;
+    }
+    img {
+      width: 195px;
+      height: 272px;
+    }
+  }
+  .modal-dialog {
+    position: relative;
+  }
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: transparent;
+    width: 60vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 90vw;
+      max-width: 435px;
+      max-height: 80vh;
+    }
+  }
+  .modal-title {
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+}
+.about {
+  width: 100%;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.swiper {
+  width: 80%;
+  margin-bottom: 25px;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+:root {
+  --swiper-theme-color: #f8f9fa;
+}
+.hand-writing {
+  width: 85%;
+  transform: rotate(-5deg) scale(110%);
+}
+.founders{
+    width: 100%;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10vw ;
+    h1{
+        align-self: flex-start;
+        margin-bottom: 30px;
+        color: $pirmary-color;
+    }    
+    h1::before{
+        @include decoration-bean(20px);
     }
 }
-.navbar{
-    background-color: $pirmary-color;
-    a{
-        color: $secondary-color;
-        font-weight: 500;
+.founder-block{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+.profile-pic{
+    width: 25vw;
+    height: 25vw;
+    // aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #a2b9d1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        width:65%
+    }
+}
+.words{
+    justify-self: flex-end;
+    margin-left: 20px;
+    h4{
+        font-weight: 600;
+        color: $pirmary-color;
+    }
+    p{
+        color: $minor-title-color;
+    }
+}
+.charity{
+    padding: 10px 8%;
+    background-color: lighten($button-color,20%);
+    *{
+        color:$pirmary-color;
+    }
+    h1{
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    h1::before{
+        @include decoration-bean(20px);
     }
     img{
-        width: 200px;
-        height: 30px;
+        width: 100%;
+        object-fit: contain;
+        object-position: top;
+        margin-bottom: 20px;
+        border-radius: 2%;
     }
-    .navbar-toggler-icon {
-        width: 45px;
-        height: 26px;
-        background-image: url(/素材/toggle-icon-03.png);
+    h3{
+        margin-bottom: 20px;
     }
-}
-.banner{
-    width: 100%;
-    position: relative;
-    
-    img:last-child{
-        position: absolute;
-        bottom: 10%;
-        right: 5%;
+    li{
+        line-height: 1.5;
     }
 }
-.introduction{
+.articles{
     width: 100%;
-    padding-top: 25px;
-    margin-bottom: 35px;
-
+    background-image: url(/素材/coffee-beans-5928036_1920.jpg);
+    background-size: cover;
+    // background-position: bottom;
+    // z-index: 0;
+    .color{
+        padding:25px 0;
+        background-color: rgba($color: #7c6556, $alpha: 0.8);
+        z-index: 1;
+    }
+    h1{
+        text-align: center;
+        color: white;
+        margin-bottom: 15px;
+    }
+    h1::before{
+        @include decoration-bean(25px);
+        background-image: url(/素材/coffee-bean-icon-white-09.svg);
+    }
+}
+.card-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    overflow-x: scroll;
+    padding-left: 10px;
+}
+.card{
+    width: 200px;
+    min-width: unset;
+    margin-right: 10px;
+    border: unset;
+    border-radius: 5%;
+}
+.card-img-top{
+    width: unset;
+    border-top-right-radius:5%;
+    border-top-left-radius:5%;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    padding:5%;
+    a{
+        color: black;
+        align-self: end;
+        font-weight: 600;
+    }
+    h4{
+        background-color: $secondary-color;
+        font-weight: 600;
+        border-radius: 5%;
+    }
+}
+.purchase{
+    padding: 25px 10%;
     h1{
         text-align: center;
         color: $pirmary-color;
-        margin-bottom: 20px;
-        line-height: 28px;
-      }
+    }
     h1::before{
         @include decoration-bean(25px);
-        margin-right: 10px;
-    }
-    .product-beans-container,.product-bags-container{
-        width: 100%;
-        padding: 0 10%;
-        margin-bottom: 25px;
-        .carousel.slide{
-        width: 100%;
-        margin-bottom: 25px;
-            .carousel-control-prev-icon{
-                background-image: url(/素材/next.svg);
-                transform: scaleX(-1);
-            }
-            .carousel-control-next-icon{
-                background-image: url(/素材/next.svg);
-            }
-            .carousel-indicators li{
-                background-color: $text-color;
-            }
-        }
-        h2,h3{
-            color: $pirmary-color;
-        }
-        ul{
-            padding: 0;
-        }
-        li{
-            color: $text-color;
-            list-style: none;
-            line-height: 35px;
-        }
-        li::before{
-            @include decoration-bean(10px);
-            margin-right: 10px;
-        }
-        h4{
-            color:$minor-title-color;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-        button{
-            @extend %button;
-            margin: 0 auto;
-            display: block;
-        }
     }
 }
-.origin{
+.icon-pair-wrap{
     width: 100%;
-    background-color: #e7e1dc;
-    padding: 15px 0;
-    h2{
-        text-align: center;
-        color: $pirmary-color;
-        margin-bottom: 15px;
-    }
-    h2::before{
-        @include decoration-bean(20px);
-        margin-right: 10px;
-    }
-    .explanation{
-        padding: 0 10%;
-        *{
-            color: $minor-title-color;
-        }
-    }
-    .pictures{
-        height: 185px;
-        overflow: scroll;
-        display: flex;
-        margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+.icon-pair{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    img{
+        width: 80%;
+        margin-bottom: 10px;
     }
 }
-.flavor{
-    width: 100%;
-    padding: 40px 10%;
+.steps{
     display: flex;
     flex-direction: column;
     align-items: center;
-    .pic{
-        width: 300px;
-        height: 300px;
-        border-radius: 50%;
-        background-image: url(/素材/flavor.jpg);
-        background-position: 0;
-        background-size: cover;
-        margin-bottom: 30px;
-    }
-    h2{
-        text-align: center;
-        color: $pirmary-color;
-    }
-    h2::before{
-        @include decoration-bean(20px);
-        margin-right: 10px;
-    }
-    p{
-        color: $pirmary-color;
+    justify-content: center;
+    width: 50%;
+    h3{
+        color: $minor-title-color;
+        margin-bottom: 5px;
     }
     h4{
-        font-weight: 600;
-        color: $minor-title-color;
-        align-self: start;
+        color: $text-color;
     }
-    ul{
-        padding-left: 0px;
-        align-self: start;
-    }
-    li{
-        list-style: none;
-        color: $minor-title-color;
-    }
-    li::before{
-        @include decoration-bean(12px);
-        margin-right: 5px;
-        background-image: url(/素材/coffee-bean-icon-red-10.svg);
+    button{
+        @extend %button;
+        width: 80%;
+        min-height: 20%;
+        $width: 50vw;
+        font-size: $width/10;
     }
 }
-.certification{
-    padding: 25px 0 35px 0;
-    background-color: #c0a898;
-    *{
-        color: white;
-    }
-    h2{
+footer{
+    background-color: #604b40;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 10%;
+    h4{
+        color: $secondary-color;
         text-align: center;
-        margin-bottom: 30px;
     }
-    h2::before{
-        @include decoration-bean(20px);
-        background-image: url(/素材/coffee-bean-icon-white-09.svg);        margin-right: 10px;
+}
+.footer-top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    .footer-logo{
+        width: 40%;
     }
-    .slider{
-        display: flex;
-        flex-wrap: nowrap;
-        flex-shrink: 0;
-        overflow-x: scroll;
-        &::-webkit-scrollbar {
-            height: 5px;
-        }
-            
-        &::-webkit-scrollbar-track {
-            margin: 10px;
-        }
-            
-        &::-webkit-scrollbar-thumb {
-            background-color: $minor-title-color;
-            border-radius: 20%;
-            border: 1px solid slategrey;
-        }
-    
-        input{
-            display: none;
-        }
-        .cover{
-            width: 200px;
-            height: 100px;
-            background-color:black;
-        }
-        .items{
-            display: inline-block;
-            margin: 0 10px;
-        }
-            h4{
-                text-align: center;
-            }
-            img{
-                width: 195px;
-                height: 272px;
-            }
+}
+.contact{
+    width: 40%;
+}
+.contact-icon-wrap{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    img{
+        width: 20%;
+        max-width: 30px;
     }
-    .modal-dialog{
-        position: relative;
-    }
-    .modal-content{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, 50%);
-        background-color: transparent;
-        width: 95vw;
-        height: 50vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        img{
-            width: 95%;
-            max-width: 435px;
-            max-height: 80vh;
-        }
-    }
-    .modal-title{
-        color:white;
-        text-align: center;
-        font-size: 24px;
-        margin-bottom: 10px;
+    img:first-child{
+        margin-right: 40px;
     }
 }
