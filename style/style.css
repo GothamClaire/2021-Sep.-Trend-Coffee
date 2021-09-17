@@ -43,6 +43,7 @@ li {
   font-size: 24px;
   border-radius: 10px;
   border: none;
+  cursor: pointer;
 }
 
 body .fixed .messenger-icon, body .fixed .line-icon, body .fixed .top {
@@ -83,15 +84,15 @@ body .fixed {
 }
 
 body .fixed .messenger-icon {
-  background-image: url(/素材/messenger-brown-06.svg);
+  background-image: url(../素材/messenger-brown-06.svg);
 }
 
 body .fixed .line-icon {
-  background-image: url(/素材/line-brown-07.svg);
+  background-image: url(../素材/line-brown-07.svg);
 }
 
 body .fixed .top {
-  background-image: url(/素材/top-08.svg);
+  background-image: url(../素材/top-08.svg);
 }
 
 main {
@@ -123,7 +124,7 @@ nav {
 .navbar .navbar-toggler-icon {
   width: 45px;
   height: 26px;
-  background-image: url(/素材/toggle-icon-03.png);
+  background-image: url(../素材/toggle-icon-03.png);
 }
 
 .banner {
@@ -152,7 +153,7 @@ nav {
 
 .introduction h1::before {
   content: "";
-  background-image: url(/素材/coffee-bean-icon-blue.svg);
+  background-image: url(../素材/coffee-bean-icon-blue.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -177,14 +178,14 @@ nav {
 
 .product-beans-container .carousel.slide .carousel-control-prev-icon,
 .product-bags-container .carousel.slide .carousel-control-prev-icon {
-  background-image: url(/素材/next.svg);
+  background-image: url(../素材/next.svg);
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
 }
 
 .product-beans-container .carousel.slide .carousel-control-next-icon,
 .product-bags-container .carousel.slide .carousel-control-next-icon {
-  background-image: url(/素材/next.svg);
+  background-image: url(../素材/next.svg);
 }
 
 .product-beans-container .carousel.slide .carousel-indicators li,
@@ -212,7 +213,7 @@ nav {
 .product-beans-container li::before,
 .product-bags-container li::before {
   content: "";
-  background-image: url(/素材/coffee-bean-icon-blue.svg);
+  background-image: url(../素材/coffee-bean-icon-blue.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -249,7 +250,7 @@ nav {
 
 .origin h2::before {
   content: "";
-  background-image: url(/素材/coffee-bean-icon-blue.svg);
+  background-image: url(../素材/coffee-bean-icon-blue.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -294,7 +295,7 @@ nav {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background-image: url(/素材/flavor.jpg);
+  background-image: url(../素材/flavor.jpg);
   background-position: 0;
   background-size: cover;
   margin-bottom: 30px;
@@ -307,7 +308,7 @@ nav {
 
 .flavor h2::before {
   content: "";
-  background-image: url(/素材/coffee-bean-icon-blue.svg);
+  background-image: url(../素材/coffee-bean-icon-blue.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -341,7 +342,7 @@ nav {
 
 .flavor li::before {
   content: "";
-  background-image: url(/素材/coffee-bean-icon-blue.svg);
+  background-image: url(../素材/coffee-bean-icon-blue.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -350,7 +351,7 @@ nav {
   height: 12px;
   margin-right: 10px;
   margin-right: 5px;
-  background-image: url(/素材/coffee-bean-icon-red-10.svg);
+  background-image: url(../素材/coffee-bean-icon-red-10.svg);
 }
 
 .certification {
@@ -369,7 +370,7 @@ nav {
 
 .certification h2::before {
   content: "";
-  background-image: url(/素材/coffee-bean-icon-blue.svg);
+  background-image: url(../素材/coffee-bean-icon-blue.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -377,7 +378,7 @@ nav {
   width: 20px;
   height: 20px;
   margin-right: 10px;
-  background-image: url(/素材/coffee-bean-icon-white-09.svg);
+  background-image: url(../素材/coffee-bean-icon-white-09.svg);
 }
 
 .certification .slider {
@@ -553,7 +554,7 @@ nav {
 
 .founders h1::before {
   content: "";
-  background-image: url(/素材/coffee-bean-icon-blue.svg);
+  background-image: url(../素材/coffee-bean-icon-blue.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -627,7 +628,7 @@ nav {
 
 .charity h1::before {
   content: "";
-  background-image: url(/素材/coffee-bean-icon-blue.svg);
+  background-image: url(../素材/coffee-bean-icon-blue.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -657,7 +658,7 @@ nav {
 
 .articles {
   width: 100%;
-  background-image: url(/素材/coffee-beans-5928036_1920.jpg);
+  background-image: url(../素材/coffee-beans-5928036_1920.jpg);
   background-size: cover;
 }
 
@@ -675,7 +676,7 @@ nav {
 
 .articles h1::before {
   content: "";
-  background-image: url(/素材/coffee-bean-icon-blue.svg);
+  background-image: url(../素材/coffee-bean-icon-blue.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -683,7 +684,7 @@ nav {
   width: 25px;
   height: 25px;
   margin-right: 10px;
-  background-image: url(/素材/coffee-bean-icon-white-09.svg);
+  background-image: url(../素材/coffee-bean-icon-white-09.svg);
 }
 
 .card-container {
@@ -749,7 +750,7 @@ nav {
 
 .purchase h1::before {
   content: "";
-  background-image: url(/素材/coffee-bean-icon-blue.svg);
+  background-image: url(../素材/coffee-bean-icon-blue.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;

@@ -18,15 +18,15 @@ body {
     bottom: 10px;
 
     .messenger-icon {
-      background-image: url(/素材/messenger-brown-06.svg);
+      background-image: url(../素材/messenger-brown-06.svg);
       @extend %fixedIcon;
     }
     .line-icon {
-      background-image: url(/素材/line-brown-07.svg);
+      background-image: url(../素材/line-brown-07.svg);
       @extend %fixedIcon;
     }
     .top {
-      background-image: url(/素材/top-08.svg);
+      background-image: url(../素材/top-08.svg);
       @extend %fixedIcon;
     }
   }
@@ -54,7 +54,7 @@ nav{
   .navbar-toggler-icon {
     width: 45px;
     height: 26px;
-    background-image: url(/素材/toggle-icon-03.png);
+    background-image: url(../素材/toggle-icon-03.png)
   }
 }
 .banner {
@@ -91,11 +91,11 @@ nav{
     width: 100%;
     margin-bottom: 25px;
     .carousel-control-prev-icon {
-      background-image: url(/素材/next.svg);
+      background-image: url(../素材/next.svg);
       transform: scaleX(-1);
     }
     .carousel-control-next-icon {
-      background-image: url(/素材/next.svg);
+      background-image: url(../素材/next.svg);
     }
     .carousel-indicators li {
       background-color: $text-color;
@@ -144,7 +144,6 @@ nav{
     }
   }
   .pictures {
-    // height: 185px;
     overflow-X: scroll;
     display: flex;
     margin-bottom: 25px;
@@ -160,7 +159,7 @@ nav{
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background-image: url(/素材/flavor.jpg);
+    background-image: url(../素材/flavor.jpg);
     background-position: 0;
     background-size: cover;
     margin-bottom: 30px;
@@ -189,7 +188,7 @@ nav{
   li::before {
     @include decoration-bean(12px);
     margin-right: 5px;
-    background-image: url(/素材/coffee-bean-icon-red-10.svg);
+    background-image: url(../素材/coffee-bean-icon-red-10.svg);
   }
 }
 .certification {
@@ -204,7 +203,7 @@ nav{
   }
   h2::before {
     @include decoration-bean(20px);
-    background-image: url(/素材/coffee-bean-icon-white-09.svg);
+    background-image: url(../素材/coffee-bean-icon-white-09.svg);
   }
   .slider {
     display: flex;
@@ -345,7 +344,6 @@ nav{
 .profile-pic{
     width: 25vw;
     height: 25vw;
-    // aspect-ratio: 1;
     border-radius: 50%;
     background-color: #a2b9d1;
     display: flex;
@@ -395,10 +393,8 @@ nav{
 }
 .articles{
     width: 100%;
-    background-image: url(/素材/coffee-beans-5928036_1920.jpg);
+    background-image: url(../素材/coffee-beans-5928036_1920.jpg);
     background-size: cover;
-    // background-position: bottom;
-    // z-index: 0;
     .color{
         padding:25px 0;
         background-color: rgba($color: #7c6556, $alpha: 0.8);
@@ -411,7 +407,7 @@ nav{
     }
     h1::before{
         @include decoration-bean(25px);
-        background-image: url(/素材/coffee-bean-icon-white-09.svg);
+        background-image: url(../素材/coffee-bean-icon-white-09.svg);
     }
 }
 .card-container{

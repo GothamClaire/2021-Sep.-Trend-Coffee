@@ -36,7 +36,7 @@ li{
 
 @mixin decoration-bean($size) {
     content: "";
-    background-image: url(/素材/coffee-bean-icon-blue.svg);
+    background-image: url(../素材/coffee-bean-icon-blue.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -54,7 +54,8 @@ li{
     font-weight: 700;
     font-size: 24px;
     border-radius: 10px;
-    border:none
+    border:none;
+    cursor: pointer;
 }
         
 %fixedIcon{
