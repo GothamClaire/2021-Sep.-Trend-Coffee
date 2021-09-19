@@ -1,4 +1,6 @@
 @import "base";
+@import "RWD-PC";
+
 * {
   font-family: "Noto Serif TC", serif;
 }
@@ -56,12 +58,14 @@ nav{
     height: 26px;
     background-image: url(../素材/toggle-icon-03.png)
   }
+  ul{
+    margin-right: auto;
+  }
 }
 .banner {
   width: 100%;
   position: relative;
-
-  img:last-child {
+  .banner-logo{
     position: absolute;
     bottom: 10%;
     right: 5%;

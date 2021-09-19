@@ -54,6 +54,106 @@ body .fixed .messenger-icon, body .fixed .line-icon, body .fixed .top {
   background-repeat: no-repeat;
 }
 
+@media (min-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4, p, li {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .fixed a {
+    display: none;
+  }
+  header {
+    width: 100%;
+  }
+  .navbar-brand {
+    margin: 0px;
+    padding: 0px;
+  }
+  nav.navbar {
+    width: 12vw;
+    min-width: 90px;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 5vh 1vw;
+  }
+  .navbar-expand-md .navbar-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-right: 0px;
+  }
+  nav .collapse.navbar-collapse {
+    width: 100%;
+    min-width: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: unset;
+        -ms-flex-positive: unset;
+            flex-grow: unset;
+  }
+  .navbar-toggler {
+    display: none;
+  }
+  .logo-mobile {
+    display: none;
+  }
+  .navbar img.logo-pc {
+    width: 8vw;
+    height: auto;
+    margin-bottom: 5vw;
+  }
+  .navbar a {
+    font-size: min(max(1.5vw, 12px), 24px);
+    letter-spacing: 0.2vw;
+  }
+  main {
+    padding-left: 10vw;
+    width: 90vw;
+  }
+  header .banner .banner-pic {
+    -webkit-transform: scaleX(-100%);
+            transform: scaleX(-100%);
+  }
+  header .banner .banner-logo {
+    -webkit-transform: scale(70%);
+            transform: scale(70%);
+    left: 12%;
+    bottom: 18%;
+  }
+}
+
 * {
   font-family: "Noto Serif TC", serif;
 }
@@ -127,12 +227,16 @@ nav {
   background-image: url(../素材/toggle-icon-03.png);
 }
 
+.navbar ul {
+  margin-right: auto;
+}
+
 .banner {
   width: 100%;
   position: relative;
 }
 
-.banner img:last-child {
+.banner .banner-logo {
   position: absolute;
   bottom: 10%;
   right: 5%;
