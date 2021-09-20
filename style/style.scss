@@ -1,6 +1,4 @@
 @import "base";
-@import "RWD-PC";
-
 * {
   font-family: "Noto Serif TC", serif;
 }
@@ -8,29 +6,29 @@ body {
   width: 100%;
   min-width: 320px;
   height: 100vh;
-  position: relative;
-  .fixed {
-    width: 30px;
-    height: 120px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
-
-    .messenger-icon {
-      background-image: url(../素材/messenger-brown-06.svg);
-      @extend %fixedIcon;
-    }
-    .line-icon {
-      background-image: url(../素材/line-brown-07.svg);
-      @extend %fixedIcon;
-    }
-    .top {
-      background-image: url(../素材/top-08.svg);
-      @extend %fixedIcon;
-    }
+  position: relative;  
+}
+.fixed {
+  width: 30px;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  left: unset;
+  .messenger-icon {
+    background-image: url(../素材/messenger-brown-06.svg);
+    @extend %fixedIcon;
+  }
+  .line-icon {
+    background-image: url(../素材/line-brown-07.svg);
+    @extend %fixedIcon;
+  }
+  .top {
+    background-image: url(../素材/top-08.svg);
+    @extend %fixedIcon;
   }
 }
 main {
@@ -94,6 +92,9 @@ nav{
   .carousel.slide {
     width: 100%;
     margin-bottom: 25px;
+    img{
+      border-radius: 2%;
+    }
     .carousel-control-prev-icon {
       background-image: url(../素材/next.svg);
       transform: scaleX(-1);
@@ -115,7 +116,7 @@ nav{
   li {
     color: $text-color;
   }
-  li::before {
+  ul li::before {
     @include decoration-bean(10px);
   }
   h4 {
@@ -278,7 +279,6 @@ nav{
   }
 }
 .about {
-  width: 100%;
   padding-top: 40px;
   display: flex;
   flex-direction: column;
@@ -396,7 +396,6 @@ nav{
     }
 }
 .articles{
-    width: 100%;
     background-image: url(../素材/coffee-beans-5928036_1920.jpg);
     background-size: cover;
     .color{
@@ -535,3 +534,4 @@ footer{
         margin-right: 40px;
     }
 }
+@import "RWD-PC";

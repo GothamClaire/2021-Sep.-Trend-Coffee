@@ -1,8 +1,26 @@
 @media (min-width: 768px) {
-.fixed a{
-    display: none;
+body .fixed{
+    width: 6vw;
+    height: unset;
+    flex-direction: row;
+    flex-wrap: wrap;
+    left: 3vw;
+    right: unset;
+    z-index: 12;
+    justify-content: center;
+    div{
+        margin: 10px 3px;
+    }
+    .messenger-icon{
+        background-image: url(../素材/messenger-white-04.svg);
+    }
+    .line-icon{
+        background-image: url(../素材/line-icon-white-14.svg);
+    }
+    .top{
+        background-image: url(../素材/top-white-04.svg);
+    }
 }
-
 header{
     width: 100%;
 }
@@ -10,7 +28,7 @@ header{
     margin: 0px;
     padding: 0px;
 }
-nav.navbar{
+.navbar{
     width: 12vw;
     min-width: 90px;
     height:100vh;
@@ -50,10 +68,10 @@ nav .collapse.navbar-collapse{
     letter-spacing:0.2vw;
 }
 main{
-    padding-left: 10vw;
-    width: 90vw;
+    padding-left: 12vw;
+    width: 88vw;
 }
-header .banner{
+.banner{
     .banner-pic{
         transform: scaleX(-100%);
     }
@@ -62,6 +80,75 @@ header .banner{
         left: 12%;
         bottom: 18%;
     }
+}
+section{
+    width: 88vw;
+    margin: 0 auto;
+}
+.introduction{
+    padding: calc(5vw - 10px) 0;
+    h1{
+        margin-bottom: 5vw;
+    }
+}
+.product-beans-container,
+.product-bags-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    .carousel.slide{
+        width: 25vw;
+        min-width: 320px;
+        margin-right: 50px;
+    }
+    .carousel-inner{
+        width: 25vw;
+        min-width: 320px;
+    }
+}
+.product-beans-container{
+    margin-bottom: 100px;
+}
+.product-bags-container{
+    flex-direction: row-reverse;
+    .carousel.slide{
+        margin-right: 0;
+    }
+}
+.copywrite{
+    width: 50vw;
+    min-width: 210px;
+    max-width: 576px;
+    display: flex;
+    flex-direction: column;
+    h2{
+        margin-bottom: 20px;
+    }
+}
+.copywrite-beans{
+    justify-self: end;
+}
+.copywrite-bags{
+    margin-right: 50px;
+}
+.price-button-wrap{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    button{
+        margin: unset;
+    }
+}
+}
+
+@media (max-width: 1000px){
+.product-beans-container,
+.product-bags-container {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.copywrite-bags{
+    margin-right: 0px;
 }
 }
 
