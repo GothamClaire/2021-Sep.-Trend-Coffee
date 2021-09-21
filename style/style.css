@@ -462,16 +462,6 @@ nav {
   border: 1px solid slategrey;
 }
 
-.certification .slider input {
-  display: none;
-}
-
-.certification .slider .cover {
-  width: 200px;
-  height: 100px;
-  background-color: black;
-}
-
 .certification .slider .items {
   display: inline-block;
   margin: 0 10px;
@@ -486,11 +476,11 @@ nav {
   height: 272px;
 }
 
-.certification .modal-dialog {
+.modal-dialog {
   position: relative;
 }
 
-.certification .modal-content {
+.modal-content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -514,13 +504,13 @@ nav {
           align-items: center;
 }
 
-.certification .modal-content img {
+.modal-content img {
   width: 90vw;
   max-width: 435px;
   max-height: 80vh;
 }
 
-.certification .modal-title {
+.modal-title {
   color: white;
   text-align: center;
   font-size: 24px;
@@ -543,6 +533,10 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 10px;
+}
+
+.about-pictures {
+  display: none;
 }
 
 .swiper {
@@ -1047,7 +1041,6 @@ footer h4 {
   }
   section {
     width: 88vw;
-    margin: 0 auto;
   }
   .introduction {
     padding: calc(5vw - 10px) 0;
@@ -1171,7 +1164,8 @@ footer h4 {
     left: 5%;
     bottom: 5%;
   }
-  .description h3, .description p {
+  .description h3,
+  .description p {
     color: white;
     font-weight: 500;
   }
@@ -1181,47 +1175,58 @@ footer h4 {
   .description p {
     font-size: min(max(1.5vw, 12px), 18px);
   }
-  .origin-pic01 {
+  .origin-pic01,
+  .about01 {
     position: relative;
     left: 40%;
   }
-  .origin-pic03 {
+  .origin-pic03,
+  .about03 {
     position: relative;
     right: 40%;
   }
-  #picture-1:checked ~ .origin-pic01 {
+  #picture-1:checked ~ .origin-pic01,
+  #about-pic-1:checked ~ .about01 {
     z-index: 2;
     -webkit-transform: translateX(30%) scale(1);
             transform: translateX(30%) scale(1);
   }
-  #picture-1:checked ~ .origin-pic01::before, #picture-2:checked ~ .origin-pic02::before, #picture-3:checked ~ .origin-pic03::before {
+  #picture-1:checked ~ .origin-pic01::before,
+  #picture-2:checked ~ .origin-pic02::before,
+  #picture-3:checked ~ .origin-pic03::before {
     background: black;
     background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(70%, rgba(0, 0, 0, 0)));
     background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0) 70%);
   }
-  #picture-2:checked ~ .origin-pic02 {
+  #picture-2:checked ~ .origin-pic02,
+  #about-pic-2:checked ~ .about02 {
     z-index: 2;
     -webkit-transform: scale(1);
             transform: scale(1);
   }
-  #picture-3:checked ~ .origin-pic03 {
+  #picture-3:checked ~ .origin-pic03,
+  #about-pic-3:checked ~ .about03 {
     z-index: 2;
     -webkit-transform: translateX(-30%) scale(1);
             transform: translateX(-30%) scale(1);
   }
-  #picture-1:checked ~ .origin-pic02 {
+  #picture-1:checked ~ .origin-pic02,
+  #about-pic-1:checked ~ .about02 {
     -webkit-transform: translateX(30%) scale(0.8);
             transform: translateX(30%) scale(0.8);
   }
-  #picture-1:checked ~ .origin-pic03 {
+  #picture-1:checked ~ .origin-pic03,
+  #about-pic-1:checked ~ .about03 {
     -webkit-transform: translateX(-60%) scale(0.8);
             transform: translateX(-60%) scale(0.8);
   }
-  #picture-3:checked ~ .origin-pic01 {
+  #picture-3:checked ~ .origin-pic01,
+  #about-pic-3:checked ~ .about01 {
     -webkit-transform: translateX(60%) scale(0.8);
             transform: translateX(60%) scale(0.8);
   }
-  #picture-3:checked ~ .origin-pic02 {
+  #picture-3:checked ~ .origin-pic02,
+  #about-pic-3:checked ~ .about02 {
     -webkit-transform: translateX(-30%) scale(0.8);
             transform: translateX(-30%) scale(0.8);
   }
@@ -1278,10 +1283,124 @@ footer h4 {
     grid-area: bottom-text;
     padding-left: 35px;
   }
+  .certification {
+    padding: 40px 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .certification h2 {
+    margin-bottom: 40px;
+  }
+  .certification .slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .certification .slider img {
+    width: 220px;
+    height: 300px;
+    margin-bottom: 50px;
+  }
+  .certification .slider .items {
+    margin: 0 20px;
+  }
+  .modal-content {
+    width: 50vw;
+  }
+  .modal-content img {
+    width: 55vw;
+    max-width: unset;
+    max-height: unset;
+  }
+  .modal-content h4 {
+    font-size: 30px;
+  }
+  .about {
+    padding: calc(5vw - 10px) 0 0 0;
+    position: relative;
+    margin-bottom: unset;
+  }
+  .about .mySwiper {
+    display: none;
+  }
+  .about input {
+    display: none;
+  }
+  .about .about-pictures {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-bottom: calc(5vw - 10px);
+  }
+  .about label {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    position: relative;
+    border-radius: 2%;
+  }
+  .about label img {
+    min-width: 50vw;
+    height: 28vw;
+    border-radius: 2%;
+  }
+  .hand-writing {
+    position: absolute;
+    -webkit-transform: rotate(-15deg) scale(0.8);
+            transform: rotate(-15deg) scale(0.8);
+    left: 20vw;
+    top: 25vw;
+    z-index: 3;
+  }
+  .founders {
+    padding: 5% 10%;
+  }
+  .founders h1 {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-bottom: 50px;
+  }
+  .founder-block-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .founder-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .profile-pic {
+    width: 15vw;
+    height: 15vw;
+    margin-bottom: 30px;
+  }
 }
 
 /* media query的結尾 */
-@media (max-width: 1000px) {
+@media (max-width: 1008px) {
   .product-beans-container,
   .product-bags-container {
     -ms-flex-wrap: wrap;
@@ -1293,8 +1412,20 @@ footer h4 {
   .copywrite-bags {
     margin-right: 0px;
   }
-  .flavor p, .flavor h4, .flavor ul {
+  .flavor p,
+  .flavor h4,
+  .flavor ul {
     padding-left: 0;
+  }
+  .certification {
+    padding: 40px 0;
+  }
+  .certification .slider img {
+    width: 195px;
+    height: 272px;
+  }
+  .certification .slider .items {
+    margin: 0 5px;
   }
 }
 

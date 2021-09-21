@@ -253,15 +253,6 @@ nav{
       border-radius: 20%;
       border: 1px solid slategrey;
     }
-
-    input {
-      display: none;
-    }
-    .cover {
-      width: 200px;
-      height: 100px;
-      background-color: black;
-    }
     .items {
       display: inline-block;
       margin: 0 10px;
@@ -274,34 +265,34 @@ nav{
       height: 272px;
     }
   }
-  .modal-dialog {
-    position: relative;
-  }
-  .modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    background-color: transparent;
-    width: 60vw;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+}
+.modal-dialog {
+  position: relative;
+}
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: transparent;
+  width: 60vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    img {
-      width: 90vw;
-      max-width: 435px;
-      max-height: 80vh;
-    }
+  img {
+    width: 90vw;
+    max-width: 435px;
+    max-height: 80vh;
   }
-  .modal-title {
-    color: white;
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
+}
+.modal-title {
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 .about {
   padding-top: 40px;
@@ -310,6 +301,9 @@ nav{
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
+}
+.about-pictures{
+  display: none;
 }
 .swiper {
   width: 80%;
