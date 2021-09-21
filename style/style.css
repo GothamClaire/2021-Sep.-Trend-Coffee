@@ -287,18 +287,49 @@ nav {
 
 .origin .explanation {
   padding: 0 10%;
+  display: inline-block;
 }
 
 .origin .explanation * {
   color: #853032;
 }
 
-.origin .pictures {
+.pictures {
   overflow-X: scroll;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   margin-bottom: 25px;
+}
+
+.pictures input {
+  display: none;
+}
+
+.pictures label {
+  min-width: 330px;
+  height: 185px;
+  background-size: cover;
+  background-position: center;
+  position: unset;
+}
+
+.description {
+  opacity: 0;
+}
+
+.origin-pic01 {
+  background-image: url(../素材/產地05.jpg);
+}
+
+.origin-pic02 {
+  background-image: url(../素材/產地06.jpg);
+}
+
+.origin-pic03 {
+  background-image: url(../素材/產地01.jpg);
 }
 
 .flavor {
@@ -1072,7 +1103,13 @@ footer h4 {
             flex-direction: column;
   }
   .copywrite h2 {
+    margin-bottom: 10px;
+  }
+  .copywrite h3 {
     margin-bottom: 20px;
+  }
+  .copywrite li {
+    line-height: 2;
   }
   .copywrite-beans {
     -ms-grid-column-align: end;
@@ -1094,8 +1131,156 @@ footer h4 {
   .price-button-wrap button {
     margin: unset;
   }
+  .origin {
+    padding: calc(5vw - 10px) 0;
+  }
+  .origin h2 {
+    margin-bottom: calc(3vw - 5px);
+  }
+  .origin .explanation {
+    display: none;
+  }
+  .origin .pictures {
+    width: 100%;
+    overflow-x: unset;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .origin .pictures label {
+    min-width: 50vw;
+    height: 28vw;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    position: relative;
+    border-radius: 2%;
+  }
+  .origin .pictures label::before {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .description {
+    width: calc(25vw + 20px);
+    opacity: 1;
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+  }
+  .description h3, .description p {
+    color: white;
+    font-weight: 500;
+  }
+  .description h3 {
+    font-size: min(max(1.5vw, 12px), 24px);
+  }
+  .description p {
+    font-size: min(max(1.5vw, 12px), 18px);
+  }
+  .origin-pic01 {
+    position: relative;
+    left: 40%;
+  }
+  .origin-pic03 {
+    position: relative;
+    right: 40%;
+  }
+  #picture-1:checked ~ .origin-pic01 {
+    z-index: 2;
+    -webkit-transform: translateX(30%) scale(1);
+            transform: translateX(30%) scale(1);
+  }
+  #picture-1:checked ~ .origin-pic01::before, #picture-2:checked ~ .origin-pic02::before, #picture-3:checked ~ .origin-pic03::before {
+    background: black;
+    background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(70%, rgba(0, 0, 0, 0)));
+    background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0) 70%);
+  }
+  #picture-2:checked ~ .origin-pic02 {
+    z-index: 2;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  #picture-3:checked ~ .origin-pic03 {
+    z-index: 2;
+    -webkit-transform: translateX(-30%) scale(1);
+            transform: translateX(-30%) scale(1);
+  }
+  #picture-1:checked ~ .origin-pic02 {
+    -webkit-transform: translateX(30%) scale(0.8);
+            transform: translateX(30%) scale(0.8);
+  }
+  #picture-1:checked ~ .origin-pic03 {
+    -webkit-transform: translateX(-60%) scale(0.8);
+            transform: translateX(-60%) scale(0.8);
+  }
+  #picture-3:checked ~ .origin-pic01 {
+    -webkit-transform: translateX(60%) scale(0.8);
+            transform: translateX(60%) scale(0.8);
+  }
+  #picture-3:checked ~ .origin-pic02 {
+    -webkit-transform: translateX(-30%) scale(0.8);
+            transform: translateX(-30%) scale(0.8);
+  }
+  .flavor {
+    padding: 40px 15%;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "title pic" "top-text pic" "middle-text pic" "bottom-text pic";
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .flavor h2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: title;
+    -ms-grid-column-align: start;
+        justify-self: start;
+    margin-bottom: 20px;
+  }
+  .flavor .pic {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 4;
+    -ms-grid-column: 2;
+    grid-area: pic;
+    width: 25vw;
+    min-width: 300px;
+    height: 25vw;
+    min-height: 300px;
+    margin-bottom: unset;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .flavor p {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: top-text;
+    padding-left: 35px;
+  }
+  .flavor h4 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: middle-text;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+    padding-left: 35px;
+  }
+  .flavor ul {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: bottom-text;
+    padding-left: 35px;
+  }
 }
 
+/* media query的結尾 */
 @media (max-width: 1000px) {
   .product-beans-container,
   .product-bags-container {
@@ -1108,5 +1293,10 @@ footer h4 {
   .copywrite-bags {
     margin-right: 0px;
   }
+  .flavor p, .flavor h4, .flavor ul {
+    padding-left: 0;
+  }
 }
+
+/* media query的結尾 */
 /*# sourceMappingURL=style.css.map */

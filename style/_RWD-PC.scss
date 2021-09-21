@@ -122,7 +122,13 @@ section{
     display: flex;
     flex-direction: column;
     h2{
+        margin-bottom: 10px;
+    }
+    h3{
         margin-bottom: 20px;
+    }
+    li{
+        line-height: 2;
     }
 }
 .copywrite-beans{
@@ -139,7 +145,129 @@ section{
         margin: unset;
     }
 }
+.origin{
+    padding: calc(5vw - 10px) 0;
+    h2{
+        margin-bottom: calc(3vw - 5px);
+    }
+    .explanation{
+        display: none;;
+    }
+    .pictures{
+        width: 100%;
+        overflow-x: unset;
+        justify-content: center;
+        label{
+            min-width: 50vw;
+            height: 28vw;
+            transform: scale(0.8);
+            transition: 0.2s;
+            position: relative;
+            border-radius: 2%;
+            }
+        label::before{
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+        }
+
+    }
 }
+.description{
+    width: calc(25vw + 20px);
+    opacity: 1;
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    h3,p{
+        color: white;
+        font-weight: 500;
+    }
+    h3{
+        font-size: m#{i}n(m#{a}x(1.5vw,12px), 24px);
+    }
+    p{
+        font-size: m#{i}n(m#{a}x(1.5vw,12px), 18px);
+    }
+}
+.origin-pic01{
+    position: relative;
+    left: 40%;
+}
+.origin-pic03{
+    position: relative;
+    right: 40%;
+}
+#picture-1:checked ~ .origin-pic01{
+    z-index: 2;
+    transform: translateX(30%) scale(1);
+}
+#picture-1:checked ~ .origin-pic01::before, #picture-2:checked ~ .origin-pic02::before, #picture-3:checked ~ .origin-pic03::before{
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%);
+}
+#picture-2:checked ~ .origin-pic02{
+    z-index: 2;
+    transform: scale(1);
+}
+#picture-3:checked ~ .origin-pic03{
+    z-index: 2;
+    transform: translateX(-30%) scale(1);
+}
+#picture-1:checked ~ .origin-pic02{
+    transform: translateX(30%) scale(0.8);
+}
+#picture-1:checked ~ .origin-pic03{
+    transform: translateX(-60%) scale(0.8);
+}
+#picture-3:checked ~ .origin-pic01{
+    transform: translateX(60%) scale(0.8);
+}
+#picture-3:checked ~ .origin-pic02{
+    transform: translateX(-30%) scale(0.8);
+}
+.flavor{
+    padding: 40px 15%;
+    display: grid;
+    grid-template-areas: "title pic"
+                        "top-text pic"
+                        "middle-text pic"
+                        "bottom-text pic";
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    h2{
+        grid-area: title;
+        justify-self: start;
+        margin-bottom: 20px;
+    }
+    .pic{
+        grid-area: pic;
+        width: 25vw;
+        min-width: 300px;
+        height: 25vw;
+        min-height: 300px;
+        margin-bottom: unset;
+        justify-self: center;
+    }
+    p{
+        grid-area: top-text;
+        padding-left: 35px;
+    }
+    h4{
+        grid-area: middle-text;
+        align-self: end;
+        padding-left: 35px;
+    }
+    ul{
+        grid-area: bottom-text;
+        padding-left: 35px;
+    }
+}
+
+
+} /* media query的結尾 */
 
 @media (max-width: 1000px){
 .product-beans-container,
@@ -150,7 +278,12 @@ section{
 .copywrite-bags{
     margin-right: 0px;
 }
+.flavor{
+    p,h4,ul{
+        padding-left: 0;
+    }
 }
+} /* media query的結尾 */
 
 
 
