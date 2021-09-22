@@ -1390,7 +1390,7 @@ footer h4 {
     position: absolute;
     -webkit-transform: rotate(-15deg) scale(0.8);
             transform: rotate(-15deg) scale(0.8);
-    left: 20vw;
+    left: 18vw;
     top: 25vw;
     z-index: 3;
   }
