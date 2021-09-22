@@ -1,4 +1,7 @@
 @media (min-width: 768px) {
+body{
+  position: relative;
+}
   body .fixed {
     width: 6vw;
     height: unset;
@@ -297,6 +300,7 @@
         width: 220px;
         height: 300px;
         margin-bottom: 50px;
+        cursor: pointer;
       }
       .items {
         margin: 0 20px;
@@ -368,6 +372,73 @@
     height: 15vw;
     margin-bottom: 30px;
   }
+  .purchase{
+    padding: calc(5vw - 10px) 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+      margin-bottom: 40px;
+    }
+  }
+  .icon-pair-wrap{
+    flex-direction: row;
+    align-items: flex-start;
+    flex-shrink: 0;
+    overflow-x: scroll;
+    margin-bottom: 30px;
+    &::-webkit-scrollbar {
+      height: 5px;
+    }
+    &::-webkit-scrollbar-track {
+      margin: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $minor-title-color;
+      border-radius: 20%;
+      border: 1px solid slategrey;
+    } 
+  }
+  .step07{
+    width: 100%;
+  }
+  .buy-now{
+    position: unset;
+    button{
+      width: calc(10vw + 100px);
+      height: 60px;
+      font-size: m#{i}n(m#{a}x(5vw, 18px), 36px);
+    }
+  }
+  .steps{
+    min-width: 207px;
+  }
+  footer{
+    padding: 40px 5%;
+    width: 88vw;
+    position: absolute;
+    right: 0;
+  }
+  .footer-logo{
+    width: 20%;
+  }
+  .contact{
+    width: unset;
+  }
+  .footer-bottom{
+    display: flex;
+    justify-content: flex-end;
+    h4:nth-child(2){
+      margin-right: 20px;
+    }
+  }
+  .footer-top{
+    margin-bottom: unset;
+    h3{
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+  }
 } /* media query的結尾 */
 
 @media (max-width: 1008px) {
@@ -398,4 +469,103 @@
       }
     }
   }
+
 } /* media query的結尾 */
+
+@media (min-width: 1300px){
+  .charity{
+    padding: 80px 0 2vh 5%;
+    position: relative;
+    background-color: unset;
+    height: calc( 30vw + 250px);
+    img{
+      position: absolute;
+      width: 65%;
+      right: 0;
+      border-radius: 2% 0 0 2%;
+    }
+    .charity-text-wrap{
+      width: 45vw;
+      padding: 3% 7%;
+      position: absolute;
+      top:25%;
+      display: flex;
+      flex-direction: column;
+      background-color: lighten($button-color,20%);
+      h1{
+        position: unset;
+        transform: translateX(0);
+        text-align: unset;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+} /*media query的結尾*/
+
+@media (min-width: 1144px){
+  .articles{
+    height: 50vw;
+    min-height: 900px;
+    h1{
+      margin-bottom: 50px;
+    }
+    .color{
+      padding-top: calc(5vw - 10px);
+      height: 50vw;
+      min-height: 900px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .card{
+    width: 350px;
+    height: 600px;
+    padding: 15px;
+    border-radius: 3%;
+    box-shadow: -20px 5px 30px rgba(0, 0, 0, 0.8);
+    transition: 0.2s;
+    h4{
+      font-size: 24px;
+      background-color: unset;
+      margin-bottom: 20px;
+    }
+    p{
+      text-overflow:ellipsis;
+      overflow:hidden;
+      display: inline;
+      display: -webkit-box !important;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      white-space: normal;
+    }
+  }
+  .card-container{
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-img-top{
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-top-right-radius:unset;
+    border-top-left-radius:unset;
+    border-radius: 5%;
+    margin-bottom: 10px;
+  }
+  .card-body{
+    background-color: $secondary-color;
+    padding: 5% 8%;
+  }
+  .card:not(:first-child){
+    margin-left: -150px;
+  }
+  .card:hover{
+    transform: translateY(-20px);
+  }
+  .card:hover~.card{
+    transform: translateX(200px);
+  }
+} /*media query的結尾*/
