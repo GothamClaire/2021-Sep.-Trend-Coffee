@@ -957,6 +957,7 @@ footer h4 {
   body {
     position: relative;
     overflow-x: hidden;
+    padding-left: 12vw;
   }
   body .fixed {
     width: 6vw;
@@ -1053,7 +1054,6 @@ footer h4 {
     letter-spacing: 0.2vw;
   }
   main {
-    padding-left: 12vw;
     width: 88vw;
   }
   .banner .banner-pic {

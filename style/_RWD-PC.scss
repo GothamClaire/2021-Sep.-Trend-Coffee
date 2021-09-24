@@ -2,6 +2,7 @@
 body{
   position: relative;
   overflow-x: hidden;
+  padding-left: 12vw;
 }
   body .fixed {
     width: 6vw;
@@ -73,7 +74,6 @@ body{
     letter-spacing: 0.2vw;
   }
   main {
-    padding-left: 12vw;
     width: 88vw;
   }
   .banner {
